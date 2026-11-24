@@ -58,7 +58,7 @@ export function getProductFilters(products: Product[]): {
 export function formatPrice(value: number): string {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD",
+    currency: "EUR",
     maximumFractionDigits: 0,
   }).format(value);
 }

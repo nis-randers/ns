@@ -2,11 +2,11 @@
 import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import handsImg from "@/assets/atelier-hands.jpg";
-import workshopImg from "@/assets/atelier-workshop.jpg";
+import workshopImg from "@/assets/strandnico.jpg";
 ---
 
 <BaseLayout
-  title="About — Atelier Kō"
+  title="About — Nis Randers"
   description="A small workshop in Småland, Sweden, building furniture by hand from solid oak, ash and walnut. Slow, signed, and made to be repaired."
   image={workshopImg}
 >
@@ -14,13 +14,20 @@ import workshopImg from "@/assets/atelier-workshop.jpg";
   <section class="mx-auto max-w-screen-xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
     <p class="mb-6 flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-faded">
       <span class="inline-block h-px w-8 bg-ink/40"></span>
-      About the atelier
+      Über Nis Randers
     </p>
+ 
     <h1 class="max-w-[18ch] text-balance font-serif text-5xl leading-[0.95] md:text-7xl">
-      A small workshop, <span class="italic text-accent">made slowly.</span>
+      Einer nach dem Andern,
+    </h1>
+    <h1 class="max-w-[18ch] text-balance font-serif text-5xl leading-[0.95] md:text-7xl">
+      <span class="italic text-accent"> Masche für Masche,</span>
+    </h1>
+    <h1 class="max-w-[18ch] text-balance font-serif text-5xl leading-[0.95] md:text-7xl">
+      in Ruhe hergestellt.
     </h1>
     <p class="mt-8 max-w-[58ch] text-lg leading-relaxed text-faded">
-      Atelier Kō is a two-person furniture workshop in Småland, Sweden. We design and build a small catalogue of seating, tables and storage — by hand, to order, in solid wood. No factory, no veneers, no rush.
+      Ich fertige zeitlose, einzigartige Fischerpullover - wind- & wetterfeste Ganseys, welche dich ein Leben lang begleiten werden.
     </p>
   </section>
 
@@ -38,38 +45,38 @@ import workshopImg from "@/assets/atelier-workshop.jpg";
 
   <section class="mx-auto mt-24 grid max-w-screen-xl gap-10 px-6 md:mt-32 md:grid-cols-12 md:gap-16">
     <div class="md:col-span-5">
-      <p class="mb-6 text-[11px] uppercase tracking-[0.3em] text-faded">Est. 2018</p>
-      <h2 class="text-balance font-serif text-3xl leading-[1.02] md:text-5xl">We started with one chair.</h2>
+      <p class="mb-6 text-[11px] uppercase tracking-[0.3em] text-faded">Est. 2026</p>
+      <h2 class="text-balance font-serif text-3xl leading-[1.02] md:text-5xl">Ein Mensch - Ein Gansey.</h2>
     </div>
     <div class="space-y-6 leading-relaxed text-faded md:col-span-6 md:col-start-7">
       <p>
-        Atelier Kō began in a borrowed barn outside Växjö, with a single steam-bent ash chair — the piece that became the Arvid. Seven years later, we still work in solid wood only, still build to order, and still sign every piece on the underside before it leaves.
+        Die Idee für Nis Randers begann mit der Fertigstellung meines ersten Ganseys.  
       </p>
       <p>
-        The catalogue is intentionally small. Six pieces, three timbers. We'd rather know a few things well than offer a hundred we don't.
+        Die Kollektion ist absichtlich klein. Vier Modelle, 12 Farbtöne. Weniger ist mehr. Lieber kann ich eine Sache richtig gut, als Hunderte anzubieten von denen ich keine wirklich beherrsche.
       </p>
     </div>
   </section>
 
   <section class="mx-auto mt-24 max-w-screen-xl border-t border-line px-6 pt-12 md:mt-32">
-    <p class="mb-12 text-[11px] uppercase tracking-[0.3em] text-faded">How we work</p>
+    <p class="mb-12 text-[11px] uppercase tracking-[0.3em] text-faded">Meine Arbeit</p>
     <div class="grid gap-x-8 gap-y-12 md:grid-cols-3">
       {
         [
           {
             n: "01",
-            h: "Solid wood, always",
-            p: "No MDF, no veneer, no engineered cores. Every surface you see and touch is the same piece of wood, all the way through.",
+            h: "Reine Schurwolle",
+            p: "In Yorkshire gesponnenes, 5-fach gezwirntes Kammgarn aus englischer Schafswolle. Das klassische, formstabile Gansey Garn.",
           },
           {
             n: "02",
-            h: "By hand, mostly",
-            p: "Machines mill and rough-cut. The joints, the surfaces, and the finish are all worked by hand. It's slower. It shows.",
+            h: "Ko-Kreation",
+            p: "Gemeinsam entwickeln wir Design und Passsform für deinen Gansey. Skizzen und Musterproben in den verschiedenen Farbgebungen, helfen uns dein Modell zu entwickeln.",
           },
           {
             n: "03",
-            h: "Made to be repaired",
-            p: "Hard-wax oils and natural soap finishes can be re-applied at home. Joints are mechanical, not glued shut. Nothing is disposable.",
+            h: "Masche für Masche",
+            p: "In Ruhe und Hingabe stricke ich den Gansey nur für dich, sodass er sich, nach einigen Wochen, liebevoll verpackt, auf den Weg zu dir machen kann.",
           },
         ].map((block) => (
           <div class="space-y-3">
@@ -100,16 +107,19 @@ import workshopImg from "@/assets/atelier-workshop.jpg";
       <div class="space-y-8 md:col-span-6 md:col-start-7">
         <p class="flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-faded">
           <span class="inline-block h-px w-8 bg-ink/40"></span>
-          On materials
+          Über Kleidung
         </p>
         <blockquote class="text-balance font-serif text-3xl leading-[1.15] md:text-4xl">
-          "We don't buy lumber by the pallet. Every board is chosen
-          <span class="italic text-accent">for the piece it will become</span> — sometimes months before it is cut."
+          "Ich fertige keine Mode. Jeder Gansey wird individuell entworfen —
+          <span class="italic text-accent">für den Menschen der ihn tragen wird</span> — und voller Hingabe hergestellt."
         </blockquote>
-        <p class="text-xs uppercase tracking-[0.25em] text-faded">— Erik Lindgren, founder</p>
+        <p class="text-xs uppercase tracking-[0.25em] text-faded">— Nico Winkler</p>
         <div class="space-y-3 border-t border-line pt-6 text-sm leading-relaxed text-faded">
           <p>
-            European oak from managed Swedish forests. Curved ash from a small reserve on the south coast. American walnut from a family mill in Pennsylvania. Three woods. No more.
+            Mit feinen 2,75mm Nadeln gestrickt, entstehen über das Jahr maximal zehn feingemusterte, wetterfeste und robuste Ganseys.
+          </p>
+          <p>
+             Ein Mann, zwei Nadeln, Schurwolle, Zeit. Nicht mehr und nicht weniger.
           </p>
         </div>
       </div>
@@ -120,10 +130,10 @@ import workshopImg from "@/assets/atelier-workshop.jpg";
     <div class="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
       {
         [
-          { n: "2018", l: "Founded" },
-          { n: "2", l: "Makers" },
-          { n: "3", l: "Timbers" },
-          { n: "4–10", l: "Weeks lead time" },
+          { n: "2026", l: "Gegründet" },
+          { n: "2", l: "Hände" },
+          { n: "1-2", l: "Konen Wolle" },
+          { n: "> 4", l: "Wochen Fertigungsdauer" },
         ].map((stat) => (
           <div class="space-y-2">
             <p class="font-serif text-4xl tabular-nums md:text-5xl">{stat.n}</p>
@@ -138,7 +148,7 @@ import workshopImg from "@/assets/atelier-workshop.jpg";
     <div class="grid items-end gap-10 md:grid-cols-12">
       <div class="md:col-span-7">
         <h2 class="max-w-[20ch] text-balance font-serif text-3xl leading-[1.02] md:text-5xl">
-          Visit the workshop, or begin with a piece.
+          Bestell dir deinen Gansey, oder besuch einen Kurs.
         </h2>
       </div>
       <div class="flex flex-col gap-4 sm:flex-row md:col-span-5 md:justify-end">
@@ -146,13 +156,13 @@ import workshopImg from "@/assets/atelier-workshop.jpg";
           href="/catalog"
           class="inline-flex items-center justify-center gap-3 rounded-full bg-ink px-7 py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--color-base)] transition-colors hover:bg-accent"
         >
-          See the catalogue →
+          Zur Kollektion →
         </a>
         <a
           href="mailto:workshop@atelier-ko.example"
           class="inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-ink ring-1 ring-line transition-colors hover:bg-paper"
         >
-          Write to us
+          Schreib mir
         </a>
       </div>
     </div>

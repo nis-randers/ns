@@ -2,14 +2,14 @@
 import { Image } from "astro:assets";
 import ProductCard from "@/components/ProductCard.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import heroImg from "@/assets/atelier-hero.jpg";
+import heroImg from "@/assets/strandnico.jpg";
 import { formatPrice, getProducts } from "@/data/products.js";
 
 const products = await getProducts();
-const featured = ["arvid-chair", "low-plinth-table", "tora-desk"]
+const featured = ["the_essential", "signature", "the_traditional"]
   .map((slug) => products.find((product) => product.slug === slug))
   .filter(Boolean);
-const solo = products.find((product) => product.slug === "monolith-bench");
+const solo = products.find((product) => product.slug === "the_collectors_piece");
 
 if (!solo) {
   throw new Error("Missing required featured product: monolith-bench");
@@ -17,7 +17,7 @@ if (!solo) {
 ---
 
 <BaseLayout
-  title="Atelier Kō — Furniture, made by hand"
+  title="Nis Randers — Handgestrickte Ganseys"
   description="A small catalogue of seating, tables and storage. Solid oak, ash and walnut, hand-built to order in Småland, Sweden."
   image={heroImg}
 >
@@ -40,23 +40,22 @@ if (!solo) {
       <div class="space-y-6 px-6 py-12">
         <p class="flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-faded">
           <span class="inline-block h-px w-8 bg-ink/40"></span>
-          Småland, Sweden · Est. 2018
+          Ettenheim, Deutschland · Est. 2026
         </p>
         <p class="text-balance font-serif text-4xl leading-[0.95]">
-          Hand-carved pieces
+          Maßgestrickte Ganseys
           <br />
-          <span class="italic text-accent">from the northern woods.</span>
+          <span class="italic text-accent">Masche für Masche.</span>
         </p>
         <p class="max-w-[48ch] text-pretty leading-relaxed text-faded">
-          A small, slow catalogue of seating, tables and storage — solid oak, ash and walnut, shaped by hand
-          and built to outlast the room they were made for.
+          Ein Kleidungsstück mit Charakter. So einzigartig wie der Mensch der es trägt.
         </p>
         <div class="flex flex-col items-start gap-4 pt-2 sm:flex-row sm:items-center">
           <a
             href="/catalog"
             class="group inline-flex items-center gap-3 rounded-full bg-ink px-7 py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--color-base)] transition-colors hover:bg-accent"
           >
-            Browse the catalogue
+            Zur Kollektion
             <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
           </a>
           <a href="/about" class="text-[11px] uppercase tracking-[0.2em] text-faded transition-colors hover:text-ink">
@@ -93,34 +92,33 @@ if (!solo) {
         <div class="max-w-[480px] space-y-8">
           <p class="flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-faded">
             <span class="inline-block h-px w-8 bg-ink/40"></span>
-            Småland, Sweden · Est. 2018
+            Ettenheim, Deutschland · Est. 2026
           </p>
           <p class="text-balance font-serif text-5xl leading-[0.95] lg:text-6xl">
-            Hand-carved pieces
+            Maßgestrickte Ganseys
             <br />
-            <span class="italic text-accent">from the northern woods.</span>
+            <span class="italic text-accent">Masche für Masche.</span>
           </p>
           <p class="max-w-[48ch] text-pretty leading-relaxed text-faded md:text-lg">
-            A small, slow catalogue of seating, tables and storage — solid oak, ash and walnut, shaped by hand
-            and built to outlast the room they were made for.
+            Ein Kleidungsstück mit Charakter. So einzigartig wie der Mensch der es trägt.
           </p>
           <div class="flex items-center gap-6 pt-2">
             <a
               href="/catalog"
               class="group inline-flex items-center gap-3 rounded-full bg-ink px-7 py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--color-base)] transition-colors hover:bg-accent"
             >
-              Browse the catalogue
+              Feinheiten
               <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a href="/about" class="text-[11px] uppercase tracking-[0.2em] text-faded transition-colors hover:text-ink">
-              Our workshop →
+              Meine Arbeit
             </a>
           </div>
         </div>
       </div>
       <div class="absolute bottom-10 right-10 hidden flex-col items-end gap-1 text-[10px] uppercase tracking-[0.3em] text-ink/70 md:flex">
-        <span>No. 04 — Arvid Lounge</span>
-        <span class="text-faded">Solid Walnut · 2025</span>
+        <span>No. 01 — mein erster Gansey</span>
+        <span class="text-faded">Claret · 2025</span>
       </div>
     </div>
   </section>
@@ -128,16 +126,16 @@ if (!solo) {
   <section class="mx-auto max-w-screen-xl px-6 pt-24 md:pt-32">
     <div class="mb-12 flex items-end justify-between gap-6 border-t border-line pt-10">
       <div>
-        <p class="mb-4 text-[11px] uppercase tracking-[0.3em] text-faded">Currently in the workshop</p>
+        <p class="mb-4 text-[11px] uppercase tracking-[0.3em] text-faded">Die Kollektion</p>
         <h2 class="max-w-[20ch] text-balance font-serif text-3xl md:text-5xl">
-          A few pieces, <span class="italic text-accent">close to ready.</span>
+          Vier Modelle, <span class="italic text-accent">endlose Kombinationsmöglichkeiten.</span>
         </h2>
       </div>
       <a
         href="/catalog"
         class="hidden items-center gap-2 whitespace-nowrap text-[11px] uppercase tracking-[0.2em] text-faded transition-colors hover:text-ink md:inline-flex"
       >
-        View all
+        zur Gallerie
         <span aria-hidden="true">→</span>
       </a>
     </div>
@@ -175,10 +173,10 @@ if (!solo) {
         <div class="space-y-6 md:col-span-5 lg:col-span-4">
           <p class="flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-faded">
             <span class="inline-block h-px w-8 bg-ink/40"></span>
-            The Monolith
+            The collectors line
           </p>
           <h2 class="text-balance font-serif text-4xl leading-[1.02] md:text-5xl">
-            One plank. <span class="italic text-accent">No hardware.</span>
+            Blocksatz <span class="italic text-accent">& Kunst.</span>
           </h2>
           <p class="text-pretty leading-relaxed text-faded">{solo.description}</p>
           <dl class="grid grid-cols-2 gap-x-6 gap-y-3 border-t border-line pt-2 text-xs">
@@ -204,28 +202,29 @@ if (!solo) {
 
   <section class="mx-auto mt-32 max-w-screen-xl px-6 md:mt-48">
     <div class="border-t border-line pt-12">
-      <p class="mb-4 text-[11px] uppercase tracking-[0.3em] text-faded">Three woods, no more</p>
+      <p class="mb-4 text-[11px] uppercase tracking-[0.3em] text-faded">Die Liebe steckt in den Details</p>
       <h2 class="mb-12 max-w-[22ch] text-balance font-serif text-3xl md:text-5xl">
-        We've spent years learning <span class="italic text-accent">three timbers</span>.
+        Ich habe Jahre damit zugebracht eine Technik zu verfeinern, <span class="italic text-accent">das Stricken</span>.
       </h2>
       <div class="grid gap-x-8 gap-y-10 md:grid-cols-3">
         {
           [
             {
-              name: "European Oak",
-              tag: "Quiet · structural",
-              copy: "A single grade of slow-grown oak from managed forests in southern Sweden. Quarter-sawn for stability.",
+              name: "In einem Stück gestrickt",
+              tag: "angenehm zu tragen",
+              copy: "Ich stricke die Ganseys in einem Stück, so sind sie frei von störenden und anfälligen Nähte.",
             },
             {
-              name: "Curved Ash",
-              tag: "Resilient · sprung",
-              copy: "A small reserve from the south coast, steam-bent over custom forms. Used only where the curve earns it.",
+              name: "Engmaschiges Gewebe",
+              tag: "wind- & wetterfest",
+              copy: "Die Herstellung eines Pullovers mit feinen - 2,75mm - Nadeln erfordert Geduld und Fingerspitzengefühl. Ein Gansey in Größe M besteht aus über 125.000 Maschen. Das Ergebniss ist ein feinmaschiges Gewebe welches Wind und Wasser von dir fern hält, mit einer Dichte von ca. g/mm.",
             },
             {
-              name: "American Walnut",
-              tag: "Warm · figured",
-              copy: "Bought in single planks from a family mill in Pennsylvania. The grain decides the piece, not the other way around.",
+              name: "Feinheiten",
+              tag: "passgenau",
+              copy: "Die gute Passform erlangen meine Ganseys, neben der Anfertigung nur für dich, durch eine Fülle an kleinen aber feinen Detais. Die Zwickel unter den Achseln, Bund und Kragen je nach Vorlieben, ein Schulterband, welches Brust und Rückenteil verbindet und die Kragenform mitbestimmt...",
             },
+            
           ].map((material) => (
             <div class="space-y-3 pt-2">
               <p class="text-[10px] uppercase tracking-[0.3em] text-faded">{material.tag}</p>
@@ -241,12 +240,12 @@ if (!solo) {
   <section class="mx-auto mt-32 max-w-screen-xl px-6 md:mt-48">
     <div class="border-t border-line pt-12">
       <div class="mx-auto max-w-xl space-y-6 text-center">
-        <p class="text-[11px] uppercase tracking-[0.3em] text-faded">Stay informed</p>
+        <p class="text-[11px] uppercase tracking-[0.3em] text-faded">Bleib dabei</p>
         <h2 class="text-balance font-serif text-3xl md:text-5xl">
-          New pieces, <span class="italic text-accent">one email at a time.</span>
+          Ein neuer Gansey, <span class="italic text-accent">eine kurze Mail.</span>
         </h2>
         <p class="mx-auto max-w-[52ch] text-sm leading-relaxed text-faded">
-          We make slowly. When something is ready — or when we open the books for new commissions — we send a short note.
+          Ich arbeite in Ruhe. Magst du eine Nachricht erhalten, wenn ein weiterer Pullover vollendet ist?
         </p>
 
         <form class="space-y-3 pt-4 text-left" data-newsletter-form>
@@ -276,10 +275,10 @@ if (!solo) {
             class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-7 py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--color-base)] transition-colors hover:bg-accent disabled:opacity-50"
             data-newsletter-button
           >
-            Notify me
+            informier mich
           </button>
           <p class="hidden pt-2 text-center text-sm text-accent" data-newsletter-success aria-live="polite">
-            You're on the list. We'll be in touch.
+            Du stehst auf der Liste. Wir bleiben in Kontakt, ich freue mich schon drauf. Alles Liebe Nico
           </p>
         </form>
       </div>

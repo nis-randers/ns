@@ -11,7 +11,8 @@ const isActive = (href = "") => {
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/catalog", label: "Catalogue" },
+  { href: "/catalog", label: "Kollektion" },
+  { href: "/kurse", label: "Kurse" },
   { href: "/about", label: "About" },
 ];
 
@@ -25,7 +26,7 @@ if (!featuredProduct) {
 <nav class="sticky top-0 z-50 border-b border-line bg-base/80 backdrop-blur-md" aria-label="Main navigation">
   <div class="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-6">
     <a href="/" class="font-serif text-xl italic tracking-tight" aria-label="Atelier Kō home">
-      Atelier Kō
+      Nis Randers
     </a>
     <div class="hidden items-center gap-8 text-sm md:flex">
       {

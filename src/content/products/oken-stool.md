@@ -1,9 +1,9 @@
 ---
-name: Oken Stool
+name: the basic
 collection: Collection 01 — Seating
-category: Seating
+category: Pullunder
 material: Oak
-price: 320
+price: 760
 shortDescription: Solid White Oak
 dimensions: Ø 32 × H 45 cm
 finish: Matte Hard-Wax Oil
@@ -14,4 +14,4 @@ images:
 order: 1
 ---
 
-Designed by our lead craftsman, the Oken stool features traditional wedge-tenon joints that will remain stable for generations. Each piece is hand-finished with a natural wax oil to preserve the breathability of the wood.
+Dein schlichte Pollunder, hält in der Übergangszeit das Herz warm. Mit flächigem Muster auf der Brust, angelehnt an die Arbeitspullover der englischen Fischer. Angepasst an unsere klimatischen Bedingungen.

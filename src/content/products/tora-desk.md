@@ -1,9 +1,9 @@
 ---
 name: Tora Desk
 collection: Collection 02 — Tables
-category: Tables
+category: Pullunder
 material: Walnut
-price: 1980
+price: 1320
 shortDescription: Architectural Walnut Desk
 dimensions: L 130 × W 62 × H 74 cm
 finish: Natural Oil
@@ -14,4 +14,4 @@ images:
 order: 6
 ---
 
-A study in proportion and restraint. The Tora Desk pairs a generous walnut surface with angular tapered legs and a single whisper-thin drawer — no hardware, only precision. Designed as a quiet architectural anchor for the workspace.
+Dein traditioneller Pollunder, hält in der Übergangszeit das Herz warm. Mit aufwendigen Muster auf der Brust, orientiert er sich an den Sonntagspullovern der englischen Fischer, welche diese oft ein Leben lang begleitet haben. Angepasst an unsere klimatischen und kulturellen Bedingungen lässt sich dieser Gansey auch im "wärmeren" tragen.
