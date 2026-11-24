@@ -17,15 +17,18 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
 const ogImage = image ? new URL(image.src ?? image, Astro.site ?? Astro.url.origin).href : undefined;
 ---
 
-{comingSoon ? (
-  <html><body><h1>Coming soon</h1></body></html>
-) : (
-  <!doctype html>
+
+// src/layouts/Base.astro
+const comingSoon = import.meta.env.COMING_SOON === "true";
+const { title = "My Site" } = Astro.props;
+---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+    {comingSoon && <meta name="robots" content="noindex, nofollow" />}
+    <title>{comingSoon ? "Coming soon" : title}</title>
+
     <meta name="description" content={description} />
     <meta name="author" content="Atelier Kō" />
     <meta name="theme-color" content="#f8f7f4" />
@@ -112,9 +115,14 @@ const ogImage = image ? new URL(image.src ?? image, Astro.site ?? Astro.url.orig
       })();
     </script>
   </head>
-  <body class="bg-base text-ink">
-    <a
-      href="#main-content"
+<body class="bg-base text-ink">
+      {comingSoon ? (
+      <main>
+        <h1>Coming soon</h1>
+        <p>We're working on it. Check back shortly.</p>
+      </main>
+    ) : (
+<a href="#main-content"
       class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:text-[var(--color-base)]"
     >
       Skip to content
@@ -123,10 +131,7 @@ const ogImage = image ? new URL(image.src ?? image, Astro.site ?? Astro.url.orig
     <div>
       <slot />
     </div>
-    {includeFooter && <SiteFooter />}
+    {includeFooter && <SiteFooter />}    
+  )}
   </body>
 </html>
-
-)}
-
-
