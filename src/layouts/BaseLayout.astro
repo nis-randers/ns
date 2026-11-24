@@ -17,16 +17,10 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
 const ogImage = image ? new URL(image.src ?? image, Astro.site ?? Astro.url.origin).href : undefined;
 ---
 
-
-// src/layouts/Base.astro
-const comingSoon = import.meta.env.COMING_SOON === "true";
-const { title = "My Site" } = Astro.props;
----
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {comingSoon && <meta name="robots" content="noindex, nofollow" />}
     <title>{comingSoon ? "Coming soon" : title}</title>
 
     <meta name="description" content={description} />
@@ -34,7 +28,7 @@ const { title = "My Site" } = Astro.props;
     <meta name="theme-color" content="#f8f7f4" />
     <link rel="canonical" href={canonicalUrl.href} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    {(comingSoon || noindex) && <meta name="robots" content="noindex, nofollow" />}
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -116,22 +110,25 @@ const { title = "My Site" } = Astro.props;
     </script>
   </head>
 <body class="bg-base text-ink">
-      {comingSoon ? (
+    {comingSoon ? (
       <main>
         <h1>Coming soon</h1>
         <p>We're working on it. Check back shortly.</p>
       </main>
     ) : (
-<a href="#main-content"
-      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:text-[var(--color-base)]"
-    >
-      Skip to content
-    </a>
-    {includeHeader && <SiteHeader currentPath={Astro.url.pathname} />}
-    <div>
-      <slot />
-    </div>
-    {includeFooter && <SiteFooter />}    
-  )}
+      <>
+        <a
+          href="#main-content"
+          class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:text-[var(--color-base)]"
+        >
+          Skip to content
+        </a>
+        {includeHeader && <SiteHeader currentPath={Astro.url.pathname} />}
+        <div>
+          <slot />
+        </div>
+        {includeFooter && <SiteFooter />}
+      </>
+    )}
   </body>
 </html>
